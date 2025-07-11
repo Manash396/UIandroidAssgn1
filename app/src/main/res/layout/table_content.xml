@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/more_light_purple"
+    android:gravity="center"
+    android:padding="8dp">
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tvDate"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="10 Jan 2025"/>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tvProduced"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="20 pcs"/>
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tvInStock"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="20 pcs"/>
+
+    <ImageView
+        android:id="@+id/btnEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/outline_edit_square_24"
+        android:contentDescription="Edit"/>
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Screen</string>
+    <string name="tableView">Table View</string>
+    <string name="listView">List View</string>
+    
+    <string-array name="products_list">
+        <item>Cloth wash Soap</item>
+        <item>Laptop</item>
+    </string-array>
+</resources>

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stock"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/viewToggle"
+        />
+
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/viewToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:singleSelection="true"
+        >
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/viewTableBtn"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tableView"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/viewListBtn"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/listView"
+            />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <LinearLayout
+        android:id="@+id/tableContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/viewToggle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_color"
+            android:orientation="vertical">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="17dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="18dp"
+            >
+
+            <Spinner
+                android:id="@+id/stockSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+
+<!--2-->
+            <LinearLayout
+                android:paddingTop="6dp"
+                android:paddingBottom="14dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+<!--1-->
+                <androidx.cardview.widget.CardView
+                    android:layout_weight="1"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="8dp"
+                    >
+               <LinearLayout
+                   android:gravity="center_vertical"
+                   android:orientation="horizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   >
+
+                   <ImageView
+                       android:layout_width="24dp"
+                       android:layout_height="24dp"
+                       android:contentDescription="stock"
+                       android:src="@drawable/outline_store_24"
+                       />
+
+                   <TextView
+                       android:text="Stock Produced: "
+                       android:layout_width="wrap_content"
+                       android:textSize="10sp"
+                       android:layout_height="wrap_content"/>
+
+                   <TextView
+                       android:text="100"
+                       android:textSize="10sp"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"/>
+
+               </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+<!--1-->
+
+<!--         2-->
+                <androidx.cardview.widget.CardView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:cardElevation="4dp"
+                    app:cardCornerRadius="8dp">
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="stock"
+                            android:src="@drawable/outline_directions_walk_24"
+                            />
+
+                        <TextView
+                            android:text="Stock Available: "
+                            android:textSize="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="80"
+                            android:textSize="10sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+<!--                2-->
+
+            </LinearLayout>
+<!--   2     -->
+
+        </LinearLayout>
+
+        <!--   layout 2     -->
+
+        <LinearLayout
+            android:background="@color/blue"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+<!--            card1 -->
+            <androidx.cardview.widget.CardView
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:paddingVertical="16dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="₹52.0"
+                        android:textStyle="bold"
+                        android:textColor="@color/green"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="Monthly Sales"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+<!--            card1-->
+
+
+<!--            card2-->
+            <androidx.cardview.widget.CardView
+                android:layout_marginVertical="10dp"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingVertical="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="₹1.0"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="Monthly Purchases"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+<!--            card2-->
+
+
+        </LinearLayout>
+
+        <!--     layout 2   -->
+
+
+<!--        layout3-->
+
+            <LinearLayout
+                android:paddingVertical="5dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                 <TextView
+                     android:text="Stock Data"
+                     android:textSize="20sp"
+                     android:textStyle="bold"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Total Sales: Rs 600"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+<!--        layout3-->
+
+<!--        layout 4-->
+        <LinearLayout
+            android:background="@color/light_purple"
+            android:paddingVertical="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:text="Stock Produced"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="In Stock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+<!--        layout 4-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/stockTableRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:nestedScrollingEnabled="true"/>
+
+
+        <LinearLayout
+            android:paddingHorizontal="6dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:src="@drawable/baseline_add_circle_24"
+                android:background="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:text="View Old Details"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:paddingVertical="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_marginHorizontal="6dp"
+                android:layout_weight="1"
+                android:text="Add Purchase"
+                android:backgroundTint="@color/dark_purple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:layout_marginEnd="6dp"
+                android:text="Add sales"
+                android:layout_weight="1"
+                android:backgroundTint="@color/green"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+<!-- list -->
+
+    <LinearLayout
+        android:id="@+id/listContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/viewToggle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/stockListRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:clipToPadding="false" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
