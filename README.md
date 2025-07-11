@@ -1,4 +1,4 @@
-# 📦 Stock Management App UI (Android, Jetpack Compose/Views)
+# 📦 Stock Management App UI (Android)
 
 This is a sample Android UI for a **Stock Management** app, built using `ConstraintLayout`, `MaterialButtonToggleGroup`, and `RecyclerView`.
 
